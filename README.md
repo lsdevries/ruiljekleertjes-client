@@ -94,7 +94,7 @@ Route | Description | Parameters
 
 Route | Description | Parameters
 ------|-------------|--------------------
-`GET` `/product` | List products | `search` (optional. Searches in: `name` `description` `category` `brand` `user` product properties) `user_id` (optional. Only list user's products)
+`GET` `/product` | List products | `search` (Searches in: `name` `description` `category` `brand` `user` product properties) `user_id` (Only list user's products) `sort` (Sort by `popularity` (amount of likes) or `follows` (latest products of persons auth user follows))
 `GET` `/product/:productId` | Get a product | `id`
 `POST` `/product` | Create a new product by auth user | `images` (array containing 1 image **) `name` `description` `gender_id` `age_id` `size_id` `category_id` `brand_id` `condition_id`
 `PUT` `/product/:productId` | Update a product by auth user | (same as `POST` `/product`)
