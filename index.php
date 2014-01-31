@@ -5,15 +5,24 @@ use Guzzle\Http\Client;
 
 // Create client object
 $client = new Client(
-	'http://localhost/ruiljekleertjes/api/public/{version}', [
+	'http://.../{version}', [	// TODO: replace ... with your API URL
 		'version' => 'v1'
+	]
+);
+
+// Set all headers
+$client->setDefaultOption(
+	'headers', [
+		'X-API-Secret' => '...' // TODO: replace ... with your API secret key
 	]
 );
 
 // Get a product listing
 $request = $client->get('product');
 $response = $request->send();
+var_dump($response->json());
 
-$request = $client->get('product/580');
+// Get a product by id
+$request = $client->get('product/1');
 $response = $request->send();
 var_dump($response->json());

@@ -10,7 +10,7 @@ use Guzzle\Http\Client;
 
 // Create client object
 $client = new Client(
-	'http://localhost/ruiljekleertjes/api/public/{version}', [
+	'http://.../{version}', [
 		'version' => 'v1'
 	]
 );
@@ -22,7 +22,13 @@ $response = $request->send();
 
 Installation
 ------------
+```bash
+# clone repository in current path
+git clone https://github.com/lsdevries/ruiljekleertjes-client ./
 
+# run composer install
+composer install
+```
 
 API HTTP routes
 --------------
