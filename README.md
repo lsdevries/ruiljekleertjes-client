@@ -99,6 +99,7 @@ Route | Description | Parameters
 `POST` `/product` | Create a new product by auth user | `images` (array containing 1 image **) `name` `description` `gender_id` `age_id` `size_id` `category_id` `brand_id` `condition_id`
 `PUT` `/product/:productId` | Update a product by auth user | (same as `POST` `/product`)
 `PUT` `/product/:productId/like` | Auth user toggle like product* | `id`
+`DELETE` `/product/:productId` | Delete product* | `id` `delete_reason` (`swapped` or `unknown`)
 
 **) When uploading images the `images` parameter should be an array of image objects with one key `imageData` with
 base64 encoded image data. `[0 => ['imageData' => '<image data>']]`. At this moment just one image per product is supported.
